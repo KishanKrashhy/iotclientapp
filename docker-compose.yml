@@ -1,0 +1,13 @@
+version: "2"
+services:
+  app:
+    container_name: iotapp
+    restart: always
+    build: .
+    ports:
+      - "4000:3000"
+    networks:
+      - iotapp-network
+networks:
+  iotapp-network:
+    driver: bridge
